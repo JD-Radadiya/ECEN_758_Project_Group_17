@@ -6,3 +6,4 @@ numpy
 tqdm
 optuna
 scikit-learn
+umap-learn

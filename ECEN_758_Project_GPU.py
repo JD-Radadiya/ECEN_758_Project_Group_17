@@ -115,14 +115,21 @@ plt.close()
 
 # %%
 class SimpleCNNImage(nn.Module):
-    def __init__(self, dropout=0.45, kernel_size=3, num_classes=10):
+    def __init__(self, dropout=0.45, kernel_size=3, num_classes=10, flag=True):
         super(SimpleCNNImage, self).__init__()
 
-        # First Convolutional Layer
-        self.conv1 = nn.Conv2d(1, 32, kernel_size=kernel_size, padding=1)
-        self.bn1 = nn.BatchNorm2d(32)  # Batch normalization added
-        self.relu1 = nn.ReLU()
-        self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+        # If flag is true, then we use grayscale images
+        if flag:
+            # First Convolutional Layer
+            self.conv1 = nn.Conv2d(1, 32, kernel_size=kernel_size, padding=1)
+            self.bn1 = nn.BatchNorm2d(32)  # Batch normalization added
+            self.relu1 = nn.ReLU()
+            self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+        else:
+            self.conv1 = nn.Conv2d(3, 32, kernel_size=kernel_size, padding=1)
+            self.bn1 = nn.BatchNorm2d(32)
+            self.relu1 = nn.ReLU()
+            self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
 
         # Second Convolutional Layer
         self.conv2 = nn.Conv2d(32, 64, kernel_size=kernel_size, padding=1)
@@ -276,6 +283,12 @@ try:
     state_dict = torch.load(model_path, map_location=device, weights_only=True)
     best_model.load_state_dict(state_dict)
     best_model.eval()
+    # extract the best parameters
+    best_params = {
+        'dropout': best_model.dropout,
+        'learning_rate': best_model.learning_rate,
+        'num_epochs': best_model.num_epochs
+    }
 except FileNotFoundError:
     # Create a study and optimize
     study = optuna.create_study(direction='maximize')
@@ -512,10 +525,10 @@ with torch.no_grad():
         images = images.to(device)
         labels = labels.to(device)
         
-        image_features = model.encode_image(images)
+        image_features = model_clip.encode_image(images)
 
         text_input = clip.tokenize(["a photo of a " + class_names[label] for label in labels]).to(device)
-        text_features = model.encode_text(text_input)
+        text_features = model_clip.encode_text(text_input)
 
         image_features /= image_features.norm(dim=-1, keepdim=True)
         text_features /= text_features.norm(dim=-1, keepdim=True)
@@ -542,16 +555,18 @@ def text_to_image_in_memory(text_query, loader, preprocess):
     best_match = None
     best_similarity = -float('inf')
 
-    for idx, (images,_) in tqdm(loader, desc="Text to Image Matching"):
+    for idx, (images, _) in tqdm(loader, desc="Text to Image Matching"):
         with torch.no_grad():
-            images = preprocess(images).to(device)
-            image_features = model_clip.encode_image(images)
-            image_features /= image_features.norm(dim=-1, keepdim=True)
-            similarity = (100.0 * image_features @ text_features.T).softmax(dim=-1)
+            for i in range(images.size(0)):  # Loop through each image in the batch
+                image = preprocess(images[i]).unsqueeze(0).to(device)  # Preprocess individual images and add batch dimension
+                image_features = model_clip.encode_image(image)
+                image_features /= image_features.norm(dim=-1, keepdim=True)
+                similarity = (100.0 * image_features @ text_features.T).softmax(dim=-1)
 
-            if similarity.max() > best_similarity:
-                best_similarity = similarity.max()
-                best_match = idx
+                if similarity.max() > best_similarity:
+                    best_similarity = similarity.max()
+                    best_match = (idx, i)  # Track both batch and index within the batch
+
     
     return best_match, best_similarity
 

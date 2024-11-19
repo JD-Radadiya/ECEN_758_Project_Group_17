@@ -444,6 +444,18 @@ def plot_results(y_true, y_pred, name):
     accuracy = accuracy_score(y_true, y_pred)
     print(f"Accuracy: {accuracy:.4f}" + f" ({name})")
 
+    print("\nMost Common Misclassifications" + f" ({name})")
+    conf_df = pd.DataFrame(cm, index=text_labels, columns=text_labels)
+    misclassified_pairs = conf_df.stack().reset_index()
+    misclassified_pairs.columns = ["True Label", "Predicted Label", "Count"]
+    misclassified_pairs = misclassified_pairs[misclassified_pairs["True Label"] != misclassified_pairs["Predicted Label"]]
+    misclassified_pairs = misclassified_pairs.sort_values("Count", ascending=False)
+    misclassified_pairs = misclassified_pairs.reset_index(drop=True)
+
+    print(misclassified_pairs.head(10))
+    print()    
+    print()
+
 # Plot the results for the validation set
 plot_results(y_true_val, y_pred_val, "Validation")
 

@@ -43,3 +43,5 @@ Hyperparameter tuning for the model was performed using Optuna, which resulted i
 
 ## Challenges and Limitations
 The analysis of misclassified samples highlighted challenges in distinguishing between visually similar classes. This limitation suggests that additional techniques, such as advanced feature extraction or attention mechanisms, could be explored to further improve classification performance.
+![Missclassified Images Test](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/misclassified_images_Test.png)
+![Missclassified Images Validation](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/misclassified_images_Validation.png)

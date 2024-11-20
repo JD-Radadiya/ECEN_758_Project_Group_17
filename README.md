@@ -30,14 +30,14 @@ The model architecture was implemented using PyTorch. It consisted of multiple c
 <div align="center">
   <b>Hierarchical Representation of CNN Architecture</b>
 </div> 
- 
-![Hierarchical Representation of CNN Architecture](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/Hierarchical%20Representation%20of%20CNN%20Architecture.png)
+
+<div align="center">
+    <img src="https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/Hierarchical%20Representation%20of%20CNN%20Architecture.png" alt="Hierarchical Representation of CNN Architecture">
+</div>
 
 The optimized model achieved a validation accuracy of 91% with a corresponding score of 0.89. We have used confusion matrix to support our analysis. 
-
 ![Confusion Matrix Validation](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/confusion_matrix_Validation.png)
 ![Confusion Matrix Test](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/confusion_matrix_Test.png)
-
 To gain further insights into the learned representations of the model, we used UMAP a dimensionality reduction technique that helps visualize high-dimensional data in a two-dimensional space.
 
 ![UMAP Visualization](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/Embedding%20Clusters.png)

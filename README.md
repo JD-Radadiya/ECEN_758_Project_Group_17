@@ -27,6 +27,10 @@ Data preprocessing included normalization to scale the pixel values to range [-1
 ## Model Architecture
 The model architecture was implemented using PyTorch. It consisted of multiple convolutional layers followed by batch normalization, ReLU activations and max pooling layers to extract meaningful features from the images. The final fully connected layers are structured to generate output class probabilities through a softmax layer. <br>
 
+<div align="center">
+  <b>Hierarchical Representation of CNN Architecture</b>
+</div> 
+ 
 ![Hierarchical Representation of CNN Architecture](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/Hierarchical%20Representation%20of%20CNN%20Architecture.png)
 
 The optimized model achieved a validation accuracy of 91% with a corresponding score of 0.89. We have used confusion matrix to support our analysis. 
@@ -50,7 +54,14 @@ The output of the model is the classification of images into the 10 classes
 ## Challenges and Limitations
 The analysis of misclassified samples highlighted challenges in distinguishing between visually similar classes. This limitation suggests that additional techniques, such as advanced feature extraction or attention mechanisms, could be explored to further improve classification performance.<br>
 
-**Missclassified Images Test**
+<div align="center">
+  <b>Missclassified Images Test</b>
+</div> 
+
 ![Missclassified Images Test](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/misclassified_images_Test.png)
-**Missclassified Images Validation**
+
+<div align="center">
+  <b>Missclassified Images Validation</b>
+</div> 
+
 ![Missclassified Images Validation](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/output_images/misclassified_images_Validation.png)

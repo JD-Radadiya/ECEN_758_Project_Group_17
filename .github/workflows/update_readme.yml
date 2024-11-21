@@ -1,5 +1,6 @@
 name: Update Image Gallery
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'images/**'

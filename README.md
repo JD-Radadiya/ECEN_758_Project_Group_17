@@ -48,84 +48,7 @@ The plot shows that the embeddings of different classes are generally well-separ
 Hyperparameter tuning for the model was performed using Optuna, which resulted in an optimal learning rate of 0.001 and a batch size of 64. The training and validation loss and accuracy over epochs, as well as the average loss and accuracy across 5 folds for the training and validation data, were visualized and plotted to gain deeper insights.
 
 # Loss Accuracy Plots
-
-<!-- ![Dropout: 0.2163, Learning Rate: 0.0007019, Epochs: 5](Images/loss_accuracy_plot_(dropout=0.21627798905909126,%20learning_rate=0.0007019114921215497,%20num_epochs=5).png)
-
-Parameters:
-- Dropout: 0.2163
-- Learning Rate: 0.0007019
-- Epochs: 5
-
-![Dropout: 0.2807, Learning Rate: 0.0002627, Epochs: 11](Images/loss_accuracy_plot_(dropout=0.2807492811706857,%20learning_rate=0.00026274735019258,%20num_epochs=11).png)
-
-Parameters:
-- Dropout: 0.2807
-- Learning Rate: 0.0002627
-- Epochs: 11
-
-![Dropout: 0.3485, Learning Rate: 0.0001965, Epochs: 15](Images/loss_accuracy_plot_(dropout=0.34848104845843775,%20learning_rate=0.00019650960917756534,%20num_epochs=15).png)
-
-Parameters:
-- Dropout: 0.3485
-- Learning Rate: 0.0001965
-- Epochs: 15
-
-![Dropout: 0.3896, Learning Rate: 0.0003006, Epochs: 18](Images/loss_accuracy_plot_(dropout=0.3896123874081374,%20learning_rate=0.0003005946213353656,%20num_epochs=18).png)
-
-Parameters:
-- Dropout: 0.3896
-- Learning Rate: 0.0003006
-- Epochs: 18
-
-![Dropout: 0.3963, Learning Rate: 0.0002274, Epochs: 6](Images/loss_accuracy_plot_(dropout=0.39632187649899253,%20learning_rate=0.00022739764755312346,%20num_epochs=6).png)
-
-Parameters:
-- Dropout: 0.3963
-- Learning Rate: 0.0002274
-- Epochs: 6
-
-![Dropout: 0.4174, Learning Rate: 0.0001271, Epochs: 8](Images/loss_accuracy_plot_(dropout=0.41735508679454963,%20learning_rate=0.00012710597700633876,%20num_epochs=8).png)
-
-Parameters:
-- Dropout: 0.4174
-- Learning Rate: 0.0001271
-- Epochs: 8
-
-![Dropout: 0.45, Learning Rate: 0.001, Epochs: 18](Images/loss_accuracy_plot_(dropout=0.45,%20learning_rate=0.001,%20num_epochs=18).png)
-
-Parameters:
-- Dropout: 0.45
-- Learning Rate: 0.001
-- Epochs: 18
-
-![Dropout: 0.4731, Learning Rate: 0.0001203, Epochs: 12](Images/loss_accuracy_plot_(dropout=0.4731226416454962,%20learning_rate=0.00012027587433867332,%20num_epochs=12).png)
-
-Parameters:
-- Dropout: 0.4731
-- Learning Rate: 0.0001203
-- Epochs: 12
-
-![Dropout: 0.4999, Learning Rate: 0.0009574, Epochs: 14](Images/loss_accuracy_plot_(dropout=0.499849001687473,%20learning_rate=0.0009573848338439847,%20num_epochs=14).png)
-
-Parameters:
-- Dropout: 0.4999
-- Learning Rate: 0.0009574
-- Epochs: 14
-
-![Dropout: 0.5399, Learning Rate: 0.002960, Epochs: 18](Images/loss_accuracy_plot_(dropout=0.539887854439211,%20learning_rate=0.0029599474145136973,%20num_epochs=18).png)
-
-Parameters:
-- Dropout: 0.5399
-- Learning Rate: 0.002960
-- Epochs: 18
-
-![Dropout: 0.5761, Learning Rate: 0.0003109, Epochs: 10](Images/loss_accuracy_plot_(dropout=0.5761434686873672,%20learning_rate=0.00031089247819835657,%20num_epochs=10).png)
-
-Parameters:
-- Dropout: 0.5761
-- Learning Rate: 0.0003109
-- Epochs: 10 -->
-
+This section displays individual loss accuracy plots for different configurations of dropout, learning rate, and epochs. Each plot represents the performance of a model based on these parameters.
 <table border="1" align="center">
   <tr>
     <td align="center">
@@ -188,7 +111,8 @@ Parameters:
   </tr>
 </table>
 
-
+# Loss Accuracy Plot across 5 Folds
+This plot shows the average loss accuracy across five different training folds, providing a comprehensive view of the model's performance across multiple runs.
 ![Loss Accuracy Plot across 5 folds](Images/average_loss_accuracy_plot_across_5_folds.png)
 
 The output of the model is the classification of images into the 10 classes 

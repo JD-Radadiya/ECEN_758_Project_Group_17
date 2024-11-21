@@ -2,7 +2,7 @@ name: Update Image Gallery
 on:
   push:
     paths:
-      - 'images/**'  # Triggers when any file in images directory changes
+      - 'images/**'
 
 jobs:
   update-markdown:
@@ -17,23 +17,24 @@ jobs:
           
       - name: Generate Markdown
         run: |
-          python -c '
-import os
-
-def generate_image_markdown(image_dir="images"):
-    markdown_lines = ["# Loss Accuracy Plots\n"]
-    image_files = [f for f in os.listdir(image_dir) if f.endswith(".png")]
-    image_files.sort()
-    
-    for image in image_files:
-        params = image.replace("loss_accuracy_plot_", "").replace(".png", "").strip("()")
-        markdown_lines.append(f"![{params}]({image_dir}/{image})\n")
-    
-    return "".join(markdown_lines)
-
-with open("PLOTS.md", "w") as f:
-    f.write(generate_image_markdown())
-          '
+          cat > generate_markdown.py << 'EOF'
+          import os
+          
+          def generate_image_markdown(image_dir="images"):
+              markdown_lines = ["# Loss Accuracy Plots\n"]
+              image_files = [f for f in os.listdir(image_dir) if f.endswith(".png")]
+              image_files.sort()
+              
+              for image in image_files:
+                  params = image.replace("loss_accuracy_plot_", "").replace(".png", "").strip("()")
+                  markdown_lines.append(f"![{params}]({image_dir}/{image})\n")
+              
+              return "".join(markdown_lines)
+          
+          with open("PLOTS.md", "w") as f:
+              f.write(generate_image_markdown())
+          EOF
+          python generate_markdown.py
           
       - name: Commit and Push Changes
         run: |

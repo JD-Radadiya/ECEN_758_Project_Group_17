@@ -47,7 +47,84 @@ The plot shows that the embeddings of different classes are generally well-separ
 
 Hyperparameter tuning for the model was performed using Optuna, which resulted in an optimal learning rate of 0.001 and a batch size of 64. The training and validation loss and accuracy over epochs, as well as the average loss and accuracy across 5 folds for the training and validation data, were visualized and plotted to gain deeper insights.
 
-![Loss Accuracy Plot](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/Images/loss_accuracy_plot.png)
+# Loss Accuracy Plots
+
+![Dropout: 0.2163, Learning Rate: 0.0007019, Epochs: 5](Images/loss_accuracy_plot_(dropout%3D0.21627798905909126%2C%20learning_rate%3D0.0007019114921215497%2C%20num_epochs%3D5).png)
+
+Parameters:
+- Dropout: 0.2163
+- Learning Rate: 0.0007019
+- Epochs: 5
+
+![Dropout: 0.2807, Learning Rate: 0.0002627, Epochs: 11](images/loss_accuracy_plot_(dropout=0.2807492811706857,_learning_rate=0.0002627473501925258,_num_epochs=11).png)
+
+Parameters:
+- Dropout: 0.2807
+- Learning Rate: 0.0002627
+- Epochs: 11
+
+![Dropout: 0.3485, Learning Rate: 0.0001965, Epochs: 15](images/loss_accuracy_plot_(dropout=0.3484810484584377,_learning_rate=0.0001965096091776,_num_epochs=15).png)
+
+Parameters:
+- Dropout: 0.3485
+- Learning Rate: 0.0001965
+- Epochs: 15
+
+![Dropout: 0.3896, Learning Rate: 0.0003006, Epochs: 18](images/loss_accuracy_plot_(dropout=0.3896123874081374,_learning_rate=0.0003005946213353656,_num_epochs=18).png)
+
+Parameters:
+- Dropout: 0.3896
+- Learning Rate: 0.0003006
+- Epochs: 18
+
+![Dropout: 0.3963, Learning Rate: 0.0002274, Epochs: 6](images/loss_accuracy_plot_(dropout=0.3963218764989253,_learning_rate=0.0002273976475531,_num_epochs=6).png)
+
+Parameters:
+- Dropout: 0.3963
+- Learning Rate: 0.0002274
+- Epochs: 6
+
+![Dropout: 0.4174, Learning Rate: 0.0001271, Epochs: 8](images/loss_accuracy_plot_(dropout=0.4173550867945963,_learning_rate=0.0001271059770063,_num_epochs=8).png)
+
+Parameters:
+- Dropout: 0.4174
+- Learning Rate: 0.0001271
+- Epochs: 8
+
+![Dropout: 0.45, Learning Rate: 0.001, Epochs: 18](images/loss_accuracy_plot_(dropout=0.45,_learning_rate=0.001,_num_epochs=18).png)
+
+Parameters:
+- Dropout: 0.45
+- Learning Rate: 0.001
+- Epochs: 18
+
+![Dropout: 0.4731, Learning Rate: 0.0001203, Epochs: 12](images/loss_accuracy_plot_(dropout=0.4731226416454962,_learning_rate=0.0001202758743386732,_num_epochs=12).png)
+
+Parameters:
+- Dropout: 0.4731
+- Learning Rate: 0.0001203
+- Epochs: 12
+
+![Dropout: 0.4999, Learning Rate: 0.0009574, Epochs: 14](images/loss_accuracy_plot_(dropout=0.499849001687473,_learning_rate=0.0009573848338439847,_num_epochs=14).png)
+
+Parameters:
+- Dropout: 0.4999
+- Learning Rate: 0.0009574
+- Epochs: 14
+
+![Dropout: 0.5399, Learning Rate: 0.002960, Epochs: 18](images/loss_accuracy_plot_(dropout=0.53988785443921,_learning_rate=0.0029599474145136973,_num_epochs=18).png)
+
+Parameters:
+- Dropout: 0.5399
+- Learning Rate: 0.002960
+- Epochs: 18
+
+![Dropout: 0.5761, Learning Rate: 0.0003109, Epochs: 10](images/loss_accuracy_plot_(dropout=0.5761434686873672,_learning_rate=0.0003108924781983657,_num_epochs=10).png)
+
+Parameters:
+- Dropout: 0.5761
+- Learning Rate: 0.0003109
+- Epochs: 10
 ![Loss Accuracy Plot across 5 folds](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/Images/average_loss_accuracy_plot_across_5_folds.png)
 
 The output of the model is the classification of images into the 10 classes 

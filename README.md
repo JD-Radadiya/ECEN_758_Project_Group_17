@@ -1,4 +1,4 @@
-# Image classification using Convolutional Neural Network (CNN) on the Fashion MNIST Dataset.
+# Multi-Object Image Classification via Convolutional Neural Network on MNIST dataset
 
 ## Problem Overview
 Fashion MNIST is a widely used benchmark that replaces the original MNIST datatset of handwritten digits. It comprises of 70,000 images; each image is 28x28 pixels in grayscale. 

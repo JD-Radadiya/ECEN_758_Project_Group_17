@@ -38,9 +38,11 @@ jobs:
           python generate_markdown.py
           
       - name: Commit and Push Changes
+        env:
+          PAT: ${{ secrets.ECEN758 }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add PLOTS.md
           git commit -m "Update plots gallery" || exit 0
-          git push
+          git push origin HEAD:${GITHUB_REF}

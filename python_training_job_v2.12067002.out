@@ -1,0 +1,420 @@
+Device: cuda
+torch.Size([64, 1, 28, 28])
+750
+torch.Size([64])
+157
+No missing data found in individual samples.
+Unique labels: [0 1 2 3 4 5 6 7 8 9]
+Counts: [6000 6000 6000 6000 6000 6000 6000 6000 6000 6000]
+Number of samples per digit:
+Digit 0: 6000
+Digit 1: 6000
+Digit 2: 6000
+Digit 3: 6000
+Digit 4: 6000
+Digit 5: 6000
+Digit 6: 6000
+Digit 7: 6000
+Digit 8: 6000
+Digit 9: 6000
+
+Total samples: 60000
+Balance ratio (min/max): 1.0
+Unique labels plotted successfully
+SimpleCNNImage(
+  (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu1): ReLU()
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu2): ReLU()
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (fc1): Linear(in_features=3136, out_features=512, bias=True)
+  (bn3): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu3): ReLU()
+  (dropout1): Dropout(p=0.45, inplace=False)
+  (fc2): Linear(in_features=512, out_features=128, bias=True)
+  (bn4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu4): ReLU()
+  (dropout2): Dropout(p=0.45, inplace=False)
+  (fc3): Linear(in_features=128, out_features=10, bias=True)
+)
+Epoch 1/5, Train Loss: 0.4648, Valid Loss: 0.3124, Train Accuracy: 84.16%, Valid Accuracy: 88.51%
+Epoch 2/5, Train Loss: 0.3221, Valid Loss: 0.2805, Train Accuracy: 88.42%, Valid Accuracy: 89.86%
+Epoch 3/5, Train Loss: 0.2854, Valid Loss: 0.2726, Train Accuracy: 89.60%, Valid Accuracy: 89.98%
+Epoch 4/5, Train Loss: 0.2619, Valid Loss: 0.2518, Train Accuracy: 90.49%, Valid Accuracy: 90.70%
+Epoch 5/5, Train Loss: 0.2499, Valid Loss: 0.2426, Train Accuracy: 90.84%, Valid Accuracy: 90.97%
+Loss and accuracy plot saved successfully
+Epoch 1/14, Train Loss: 0.5416, Valid Loss: 0.3653, Train Accuracy: 81.72%, Valid Accuracy: 86.33%
+Epoch 2/14, Train Loss: 0.3746, Valid Loss: 0.2922, Train Accuracy: 86.63%, Valid Accuracy: 89.19%
+Epoch 3/14, Train Loss: 0.3377, Valid Loss: 0.2639, Train Accuracy: 87.96%, Valid Accuracy: 90.04%
+Epoch 4/14, Train Loss: 0.3163, Valid Loss: 0.2564, Train Accuracy: 88.81%, Valid Accuracy: 90.55%
+Epoch 5/14, Train Loss: 0.2957, Valid Loss: 0.2439, Train Accuracy: 89.50%, Valid Accuracy: 90.96%
+Epoch 6/14, Train Loss: 0.2786, Valid Loss: 0.2377, Train Accuracy: 89.99%, Valid Accuracy: 91.07%
+Epoch 7/14, Train Loss: 0.2733, Valid Loss: 0.2279, Train Accuracy: 90.33%, Valid Accuracy: 91.55%
+Epoch 8/14, Train Loss: 0.2642, Valid Loss: 0.2359, Train Accuracy: 90.49%, Valid Accuracy: 91.30%
+Epoch 9/14, Train Loss: 0.2530, Valid Loss: 0.2233, Train Accuracy: 91.06%, Valid Accuracy: 91.80%
+Epoch 10/14, Train Loss: 0.2521, Valid Loss: 0.2165, Train Accuracy: 91.07%, Valid Accuracy: 92.09%
+Epoch 11/14, Train Loss: 0.2395, Valid Loss: 0.2177, Train Accuracy: 91.41%, Valid Accuracy: 91.92%
+Epoch 12/14, Train Loss: 0.2374, Valid Loss: 0.2133, Train Accuracy: 91.47%, Valid Accuracy: 92.04%
+Epoch 13/14, Train Loss: 0.2334, Valid Loss: 0.2170, Train Accuracy: 91.73%, Valid Accuracy: 91.98%
+Epoch 14/14, Train Loss: 0.2239, Valid Loss: 0.2106, Train Accuracy: 91.97%, Valid Accuracy: 92.38%
+Loss and accuracy plot saved successfully
+Epoch 1/12, Train Loss: 0.7727, Valid Loss: 0.4240, Train Accuracy: 78.05%, Valid Accuracy: 85.91%
+Epoch 2/12, Train Loss: 0.4588, Valid Loss: 0.3333, Train Accuracy: 85.26%, Valid Accuracy: 88.22%
+Epoch 3/12, Train Loss: 0.3891, Valid Loss: 0.3121, Train Accuracy: 87.11%, Valid Accuracy: 88.42%
+Epoch 4/12, Train Loss: 0.3552, Valid Loss: 0.2796, Train Accuracy: 87.86%, Valid Accuracy: 89.91%
+Epoch 5/12, Train Loss: 0.3316, Valid Loss: 0.2776, Train Accuracy: 88.59%, Valid Accuracy: 89.86%
+Epoch 6/12, Train Loss: 0.3141, Valid Loss: 0.2598, Train Accuracy: 89.06%, Valid Accuracy: 90.72%
+Epoch 7/12, Train Loss: 0.3016, Valid Loss: 0.2554, Train Accuracy: 89.50%, Valid Accuracy: 90.66%
+Epoch 8/12, Train Loss: 0.2932, Valid Loss: 0.2450, Train Accuracy: 89.67%, Valid Accuracy: 90.96%
+Epoch 9/12, Train Loss: 0.2841, Valid Loss: 0.2455, Train Accuracy: 89.93%, Valid Accuracy: 90.84%
+Epoch 10/12, Train Loss: 0.2743, Valid Loss: 0.2432, Train Accuracy: 90.22%, Valid Accuracy: 91.19%
+Epoch 11/12, Train Loss: 0.2639, Valid Loss: 0.2348, Train Accuracy: 90.64%, Valid Accuracy: 91.33%
+Epoch 12/12, Train Loss: 0.2605, Valid Loss: 0.2315, Train Accuracy: 90.79%, Valid Accuracy: 91.45%
+Loss and accuracy plot saved successfully
+Epoch 1/10, Train Loss: 0.6946, Valid Loss: 0.3610, Train Accuracy: 78.88%, Valid Accuracy: 87.38%
+Epoch 2/10, Train Loss: 0.4343, Valid Loss: 0.3139, Train Accuracy: 85.45%, Valid Accuracy: 88.61%
+Epoch 3/10, Train Loss: 0.3789, Valid Loss: 0.2899, Train Accuracy: 87.00%, Valid Accuracy: 89.10%
+Epoch 4/10, Train Loss: 0.3527, Valid Loss: 0.2722, Train Accuracy: 87.85%, Valid Accuracy: 89.85%
+Epoch 5/10, Train Loss: 0.3326, Valid Loss: 0.2737, Train Accuracy: 88.58%, Valid Accuracy: 90.05%
+Epoch 6/10, Train Loss: 0.3170, Valid Loss: 0.2552, Train Accuracy: 88.98%, Valid Accuracy: 90.47%
+Epoch 7/10, Train Loss: 0.3075, Valid Loss: 0.2496, Train Accuracy: 89.08%, Valid Accuracy: 90.67%
+Epoch 8/10, Train Loss: 0.2968, Valid Loss: 0.2397, Train Accuracy: 89.64%, Valid Accuracy: 91.24%
+Epoch 9/10, Train Loss: 0.2870, Valid Loss: 0.2377, Train Accuracy: 89.87%, Valid Accuracy: 91.03%
+Epoch 10/10, Train Loss: 0.2816, Valid Loss: 0.2470, Train Accuracy: 90.09%, Valid Accuracy: 91.07%
+Loss and accuracy plot saved successfully
+Epoch 1/15, Train Loss: 0.5946, Valid Loss: 0.3429, Train Accuracy: 81.99%, Valid Accuracy: 88.08%
+Epoch 2/15, Train Loss: 0.3708, Valid Loss: 0.2966, Train Accuracy: 87.21%, Valid Accuracy: 88.97%
+Epoch 3/15, Train Loss: 0.3254, Valid Loss: 0.2804, Train Accuracy: 88.50%, Valid Accuracy: 89.68%
+Epoch 4/15, Train Loss: 0.3009, Valid Loss: 0.2693, Train Accuracy: 89.30%, Valid Accuracy: 89.97%
+Epoch 5/15, Train Loss: 0.2832, Valid Loss: 0.2567, Train Accuracy: 89.86%, Valid Accuracy: 90.57%
+Epoch 6/15, Train Loss: 0.2702, Valid Loss: 0.2414, Train Accuracy: 90.25%, Valid Accuracy: 91.31%
+Epoch 7/15, Train Loss: 0.2559, Valid Loss: 0.2336, Train Accuracy: 90.72%, Valid Accuracy: 91.60%
+Epoch 8/15, Train Loss: 0.2498, Valid Loss: 0.2348, Train Accuracy: 91.07%, Valid Accuracy: 91.24%
+Epoch 9/15, Train Loss: 0.2392, Valid Loss: 0.2297, Train Accuracy: 91.41%, Valid Accuracy: 91.67%
+Epoch 10/15, Train Loss: 0.2328, Valid Loss: 0.2321, Train Accuracy: 91.52%, Valid Accuracy: 91.32%
+Epoch 11/15, Train Loss: 0.2271, Valid Loss: 0.2139, Train Accuracy: 91.78%, Valid Accuracy: 92.23%
+Epoch 12/15, Train Loss: 0.2189, Valid Loss: 0.2251, Train Accuracy: 92.10%, Valid Accuracy: 91.61%
+Epoch 13/15, Train Loss: 0.2122, Valid Loss: 0.2251, Train Accuracy: 92.22%, Valid Accuracy: 91.58%
+Epoch 14/15, Train Loss: 0.2084, Valid Loss: 0.2118, Train Accuracy: 92.36%, Valid Accuracy: 92.04%
+Epoch 15/15, Train Loss: 0.2039, Valid Loss: 0.2136, Train Accuracy: 92.61%, Valid Accuracy: 92.08%
+Loss and accuracy plot saved successfully
+Epoch 1/11, Train Loss: 0.5434, Valid Loss: 0.3644, Train Accuracy: 83.04%, Valid Accuracy: 86.81%
+Epoch 2/11, Train Loss: 0.3500, Valid Loss: 0.2905, Train Accuracy: 87.82%, Valid Accuracy: 89.38%
+Epoch 3/11, Train Loss: 0.3065, Valid Loss: 0.2758, Train Accuracy: 89.11%, Valid Accuracy: 89.74%
+Epoch 4/11, Train Loss: 0.2820, Valid Loss: 0.2588, Train Accuracy: 89.82%, Valid Accuracy: 90.38%
+Epoch 5/11, Train Loss: 0.2685, Valid Loss: 0.2551, Train Accuracy: 90.29%, Valid Accuracy: 90.28%
+Epoch 6/11, Train Loss: 0.2549, Valid Loss: 0.2348, Train Accuracy: 90.73%, Valid Accuracy: 91.42%
+Epoch 7/11, Train Loss: 0.2412, Valid Loss: 0.2248, Train Accuracy: 91.24%, Valid Accuracy: 91.51%
+Epoch 8/11, Train Loss: 0.2316, Valid Loss: 0.2203, Train Accuracy: 91.53%, Valid Accuracy: 91.86%
+Epoch 9/11, Train Loss: 0.2252, Valid Loss: 0.2176, Train Accuracy: 91.72%, Valid Accuracy: 92.09%
+Epoch 10/11, Train Loss: 0.2187, Valid Loss: 0.2198, Train Accuracy: 91.98%, Valid Accuracy: 91.79%
+Epoch 11/11, Train Loss: 0.2112, Valid Loss: 0.2289, Train Accuracy: 92.21%, Valid Accuracy: 91.39%
+Loss and accuracy plot saved successfully
+Epoch 1/18, Train Loss: 0.5434, Valid Loss: 0.3324, Train Accuracy: 81.06%, Valid Accuracy: 87.58%
+Epoch 2/18, Train Loss: 0.3926, Valid Loss: 0.3080, Train Accuracy: 86.15%, Valid Accuracy: 88.67%
+Epoch 3/18, Train Loss: 0.3484, Valid Loss: 0.2750, Train Accuracy: 87.47%, Valid Accuracy: 89.64%
+Epoch 4/18, Train Loss: 0.3284, Valid Loss: 0.2551, Train Accuracy: 88.32%, Valid Accuracy: 90.46%
+Epoch 5/18, Train Loss: 0.3091, Valid Loss: 0.2587, Train Accuracy: 88.99%, Valid Accuracy: 90.43%
+Epoch 6/18, Train Loss: 0.2935, Valid Loss: 0.3004, Train Accuracy: 89.45%, Valid Accuracy: 88.79%
+Epoch 7/18, Train Loss: 0.2909, Valid Loss: 0.2307, Train Accuracy: 89.72%, Valid Accuracy: 91.67%
+Epoch 8/18, Train Loss: 0.2820, Valid Loss: 0.2432, Train Accuracy: 90.00%, Valid Accuracy: 90.73%
+Epoch 9/18, Train Loss: 0.2685, Valid Loss: 0.2275, Train Accuracy: 90.43%, Valid Accuracy: 91.58%
+Epoch 10/18, Train Loss: 0.2626, Valid Loss: 0.2245, Train Accuracy: 90.75%, Valid Accuracy: 91.66%
+Epoch 11/18, Train Loss: 0.2562, Valid Loss: 0.2199, Train Accuracy: 90.81%, Valid Accuracy: 91.87%
+Epoch 12/18, Train Loss: 0.2493, Valid Loss: 0.2203, Train Accuracy: 91.11%, Valid Accuracy: 92.12%
+Epoch 13/18, Train Loss: 0.2459, Valid Loss: 0.2138, Train Accuracy: 91.23%, Valid Accuracy: 92.07%
+Epoch 14/18, Train Loss: 0.2395, Valid Loss: 0.2114, Train Accuracy: 91.41%, Valid Accuracy: 92.33%
+Epoch 15/18, Train Loss: 0.2355, Valid Loss: 0.2117, Train Accuracy: 91.55%, Valid Accuracy: 92.19%
+Epoch 16/18, Train Loss: 0.2302, Valid Loss: 0.2058, Train Accuracy: 91.69%, Valid Accuracy: 92.53%
+Epoch 17/18, Train Loss: 0.2288, Valid Loss: 0.2117, Train Accuracy: 91.89%, Valid Accuracy: 92.34%
+Epoch 18/18, Train Loss: 0.2220, Valid Loss: 0.2116, Train Accuracy: 92.16%, Valid Accuracy: 92.17%
+Loss and accuracy plot saved successfully
+Epoch 1/18, Train Loss: 0.5664, Valid Loss: 0.3570, Train Accuracy: 82.30%, Valid Accuracy: 86.85%
+Epoch 2/18, Train Loss: 0.3679, Valid Loss: 0.3150, Train Accuracy: 87.24%, Valid Accuracy: 88.42%
+Epoch 3/18, Train Loss: 0.3226, Valid Loss: 0.2632, Train Accuracy: 88.63%, Valid Accuracy: 90.25%
+Epoch 4/18, Train Loss: 0.3036, Valid Loss: 0.2568, Train Accuracy: 89.08%, Valid Accuracy: 90.49%
+Epoch 5/18, Train Loss: 0.2863, Valid Loss: 0.2568, Train Accuracy: 89.71%, Valid Accuracy: 90.71%
+Epoch 6/18, Train Loss: 0.2689, Valid Loss: 0.2478, Train Accuracy: 90.30%, Valid Accuracy: 90.88%
+Epoch 7/18, Train Loss: 0.2614, Valid Loss: 0.2331, Train Accuracy: 90.66%, Valid Accuracy: 91.47%
+Epoch 8/18, Train Loss: 0.2528, Valid Loss: 0.2351, Train Accuracy: 90.93%, Valid Accuracy: 91.37%
+Epoch 9/18, Train Loss: 0.2383, Valid Loss: 0.2225, Train Accuracy: 91.45%, Valid Accuracy: 91.89%
+Epoch 10/18, Train Loss: 0.2372, Valid Loss: 0.2259, Train Accuracy: 91.44%, Valid Accuracy: 91.58%
+Epoch 11/18, Train Loss: 0.2273, Valid Loss: 0.2245, Train Accuracy: 91.71%, Valid Accuracy: 91.70%
+Epoch 12/18, Train Loss: 0.2208, Valid Loss: 0.2160, Train Accuracy: 92.04%, Valid Accuracy: 92.12%
+Epoch 13/18, Train Loss: 0.2161, Valid Loss: 0.2193, Train Accuracy: 92.32%, Valid Accuracy: 91.98%
+Epoch 14/18, Train Loss: 0.2126, Valid Loss: 0.2113, Train Accuracy: 92.16%, Valid Accuracy: 92.21%
+Epoch 15/18, Train Loss: 0.2084, Valid Loss: 0.2124, Train Accuracy: 92.48%, Valid Accuracy: 92.38%
+Epoch 16/18, Train Loss: 0.2041, Valid Loss: 0.2054, Train Accuracy: 92.56%, Valid Accuracy: 92.53%
+Epoch 17/18, Train Loss: 0.1963, Valid Loss: 0.2027, Train Accuracy: 92.91%, Valid Accuracy: 92.48%
+Epoch 18/18, Train Loss: 0.1938, Valid Loss: 0.2100, Train Accuracy: 92.93%, Valid Accuracy: 92.25%
+Loss and accuracy plot saved successfully
+Epoch 1/8, Train Loss: 0.6975, Valid Loss: 0.3855, Train Accuracy: 80.18%, Valid Accuracy: 87.31%
+Epoch 2/8, Train Loss: 0.4161, Valid Loss: 0.3176, Train Accuracy: 86.42%, Valid Accuracy: 88.79%
+Epoch 3/8, Train Loss: 0.3587, Valid Loss: 0.2890, Train Accuracy: 87.77%, Valid Accuracy: 89.35%
+Epoch 4/8, Train Loss: 0.3312, Valid Loss: 0.2688, Train Accuracy: 88.60%, Valid Accuracy: 90.16%
+Epoch 5/8, Train Loss: 0.3064, Valid Loss: 0.2638, Train Accuracy: 89.31%, Valid Accuracy: 90.37%
+Epoch 6/8, Train Loss: 0.2941, Valid Loss: 0.2502, Train Accuracy: 89.49%, Valid Accuracy: 90.72%
+Epoch 7/8, Train Loss: 0.2771, Valid Loss: 0.2573, Train Accuracy: 90.28%, Valid Accuracy: 90.57%
+Epoch 8/8, Train Loss: 0.2743, Valid Loss: 0.2474, Train Accuracy: 90.26%, Valid Accuracy: 90.83%
+Loss and accuracy plot saved successfully
+Epoch 1/6, Train Loss: 0.6099, Valid Loss: 0.3535, Train Accuracy: 81.22%, Valid Accuracy: 87.57%
+Epoch 2/6, Train Loss: 0.3832, Valid Loss: 0.2978, Train Accuracy: 86.71%, Valid Accuracy: 89.14%
+Epoch 3/6, Train Loss: 0.3355, Valid Loss: 0.2746, Train Accuracy: 88.26%, Valid Accuracy: 89.80%
+Epoch 4/6, Train Loss: 0.3093, Valid Loss: 0.2683, Train Accuracy: 88.87%, Valid Accuracy: 89.97%
+Epoch 5/6, Train Loss: 0.2912, Valid Loss: 0.2646, Train Accuracy: 89.61%, Valid Accuracy: 90.07%
+Epoch 6/6, Train Loss: 0.2788, Valid Loss: 0.2417, Train Accuracy: 89.83%, Valid Accuracy: 91.12%
+Loss and accuracy plot saved successfully
+Best parameters found:
+{'dropout': 0.539887854439211, 'learning_rate': 0.0029599474145136973, 'num_epochs': 18}
+Epoch 1/18, Train Loss: 0.5364, Valid Loss: 0.3504, Train Accuracy: 81.12%, Valid Accuracy: 86.94%
+Epoch 2/18, Train Loss: 0.3946, Valid Loss: 0.3060, Train Accuracy: 86.10%, Valid Accuracy: 88.82%
+Epoch 3/18, Train Loss: 0.3536, Valid Loss: 0.2935, Train Accuracy: 87.61%, Valid Accuracy: 89.03%
+Epoch 4/18, Train Loss: 0.3272, Valid Loss: 0.2646, Train Accuracy: 88.42%, Valid Accuracy: 89.97%
+Epoch 5/18, Train Loss: 0.3111, Valid Loss: 0.2488, Train Accuracy: 88.96%, Valid Accuracy: 90.72%
+Epoch 6/18, Train Loss: 0.2966, Valid Loss: 0.2508, Train Accuracy: 89.41%, Valid Accuracy: 90.97%
+Epoch 7/18, Train Loss: 0.2873, Valid Loss: 0.2321, Train Accuracy: 89.79%, Valid Accuracy: 91.32%
+Epoch 8/18, Train Loss: 0.2785, Valid Loss: 0.2268, Train Accuracy: 90.00%, Valid Accuracy: 91.56%
+Epoch 9/18, Train Loss: 0.2703, Valid Loss: 0.2330, Train Accuracy: 90.47%, Valid Accuracy: 91.28%
+Epoch 10/18, Train Loss: 0.2601, Valid Loss: 0.2284, Train Accuracy: 90.73%, Valid Accuracy: 91.50%
+Epoch 11/18, Train Loss: 0.2518, Valid Loss: 0.2200, Train Accuracy: 90.99%, Valid Accuracy: 91.62%
+Epoch 12/18, Train Loss: 0.2472, Valid Loss: 0.2224, Train Accuracy: 91.05%, Valid Accuracy: 91.81%
+Epoch 13/18, Train Loss: 0.2405, Valid Loss: 0.2218, Train Accuracy: 91.35%, Valid Accuracy: 91.88%
+Epoch 14/18, Train Loss: 0.2364, Valid Loss: 0.2066, Train Accuracy: 91.57%, Valid Accuracy: 92.16%
+Epoch 15/18, Train Loss: 0.2374, Valid Loss: 0.2115, Train Accuracy: 91.46%, Valid Accuracy: 92.08%
+Epoch 16/18, Train Loss: 0.2289, Valid Loss: 0.2089, Train Accuracy: 91.76%, Valid Accuracy: 92.44%
+Epoch 17/18, Train Loss: 0.2243, Valid Loss: 0.2163, Train Accuracy: 91.95%, Valid Accuracy: 92.09%
+Epoch 18/18, Train Loss: 0.2189, Valid Loss: 0.2169, Train Accuracy: 92.21%, Valid Accuracy: 92.14%
+Loss and accuracy plot saved successfully
+Model state dict saved to ./model/best_model_state.pth
+Evaluating on the validation set
+Evaluating on the test set
+Test Loss: 0.2252, Test Accuracy: 91.97%
+Fold 1/5
+Epoch 1/18, Train Loss: 0.5388, Valid Loss: 0.3527, Train Accuracy: 81.18%, Valid Accuracy: 86.81%
+Epoch 2/18, Train Loss: 0.3877, Valid Loss: 0.3101, Train Accuracy: 86.36%, Valid Accuracy: 88.46%
+Epoch 3/18, Train Loss: 0.3506, Valid Loss: 0.2776, Train Accuracy: 87.73%, Valid Accuracy: 89.57%
+Epoch 4/18, Train Loss: 0.3267, Valid Loss: 0.2619, Train Accuracy: 88.61%, Valid Accuracy: 90.39%
+Epoch 5/18, Train Loss: 0.3088, Valid Loss: 0.2527, Train Accuracy: 89.01%, Valid Accuracy: 90.80%
+Epoch 6/18, Train Loss: 0.2999, Valid Loss: 0.2545, Train Accuracy: 89.43%, Valid Accuracy: 90.71%
+Epoch 7/18, Train Loss: 0.2895, Valid Loss: 0.2432, Train Accuracy: 89.84%, Valid Accuracy: 91.00%
+Epoch 8/18, Train Loss: 0.2770, Valid Loss: 0.2412, Train Accuracy: 90.13%, Valid Accuracy: 91.12%
+Epoch 9/18, Train Loss: 0.2701, Valid Loss: 0.2254, Train Accuracy: 90.28%, Valid Accuracy: 91.61%
+Epoch 10/18, Train Loss: 0.2649, Valid Loss: 0.2348, Train Accuracy: 90.65%, Valid Accuracy: 91.60%
+Epoch 11/18, Train Loss: 0.2523, Valid Loss: 0.2261, Train Accuracy: 91.15%, Valid Accuracy: 91.60%
+Epoch 12/18, Train Loss: 0.2503, Valid Loss: 0.2252, Train Accuracy: 91.05%, Valid Accuracy: 91.53%
+Epoch 13/18, Train Loss: 0.2434, Valid Loss: 0.2177, Train Accuracy: 91.32%, Valid Accuracy: 92.09%
+Epoch 14/18, Train Loss: 0.2346, Valid Loss: 0.2265, Train Accuracy: 91.57%, Valid Accuracy: 91.47%
+Epoch 15/18, Train Loss: 0.2351, Valid Loss: 0.2148, Train Accuracy: 91.48%, Valid Accuracy: 92.07%
+Epoch 16/18, Train Loss: 0.2338, Valid Loss: 0.2115, Train Accuracy: 91.67%, Valid Accuracy: 92.39%
+Epoch 17/18, Train Loss: 0.2267, Valid Loss: 0.2241, Train Accuracy: 91.72%, Valid Accuracy: 91.84%
+Epoch 18/18, Train Loss: 0.2163, Valid Loss: 0.2141, Train Accuracy: 92.21%, Valid Accuracy: 92.31%
+Loss and accuracy plot saved successfully
+Fold 2/5
+Epoch 1/18, Train Loss: 0.5429, Valid Loss: 0.3342, Train Accuracy: 81.05%, Valid Accuracy: 87.47%
+Epoch 2/18, Train Loss: 0.3953, Valid Loss: 0.2832, Train Accuracy: 86.08%, Valid Accuracy: 89.92%
+Epoch 3/18, Train Loss: 0.3535, Valid Loss: 0.2864, Train Accuracy: 87.60%, Valid Accuracy: 89.34%
+Epoch 4/18, Train Loss: 0.3293, Valid Loss: 0.2501, Train Accuracy: 88.38%, Valid Accuracy: 90.97%
+Epoch 5/18, Train Loss: 0.3141, Valid Loss: 0.2621, Train Accuracy: 88.84%, Valid Accuracy: 90.23%
+Epoch 6/18, Train Loss: 0.2959, Valid Loss: 0.2437, Train Accuracy: 89.42%, Valid Accuracy: 91.15%
+Epoch 7/18, Train Loss: 0.2863, Valid Loss: 0.2461, Train Accuracy: 89.69%, Valid Accuracy: 90.88%
+Epoch 8/18, Train Loss: 0.2798, Valid Loss: 0.2337, Train Accuracy: 90.27%, Valid Accuracy: 91.21%
+Epoch 9/18, Train Loss: 0.2709, Valid Loss: 0.2175, Train Accuracy: 90.49%, Valid Accuracy: 92.14%
+Epoch 10/18, Train Loss: 0.2631, Valid Loss: 0.2241, Train Accuracy: 90.57%, Valid Accuracy: 91.94%
+Epoch 11/18, Train Loss: 0.2592, Valid Loss: 0.2111, Train Accuracy: 90.69%, Valid Accuracy: 92.31%
+Epoch 12/18, Train Loss: 0.2543, Valid Loss: 0.2323, Train Accuracy: 91.02%, Valid Accuracy: 91.23%
+Epoch 13/18, Train Loss: 0.2449, Valid Loss: 0.2166, Train Accuracy: 91.31%, Valid Accuracy: 92.36%
+Epoch 14/18, Train Loss: 0.2388, Valid Loss: 0.2132, Train Accuracy: 91.46%, Valid Accuracy: 92.36%
+Epoch 15/18, Train Loss: 0.2377, Valid Loss: 0.2129, Train Accuracy: 91.54%, Valid Accuracy: 92.50%
+Epoch 16/18, Train Loss: 0.2288, Valid Loss: 0.2004, Train Accuracy: 91.73%, Valid Accuracy: 92.86%
+Epoch 17/18, Train Loss: 0.2284, Valid Loss: 0.2093, Train Accuracy: 91.77%, Valid Accuracy: 92.12%
+Epoch 18/18, Train Loss: 0.2233, Valid Loss: 0.2053, Train Accuracy: 91.99%, Valid Accuracy: 92.59%
+Loss and accuracy plot saved successfully
+Fold 3/5
+Epoch 1/18, Train Loss: 0.5467, Valid Loss: 0.3295, Train Accuracy: 80.95%, Valid Accuracy: 87.75%
+Epoch 2/18, Train Loss: 0.3946, Valid Loss: 0.3127, Train Accuracy: 86.22%, Valid Accuracy: 88.03%
+Epoch 3/18, Train Loss: 0.3546, Valid Loss: 0.2907, Train Accuracy: 87.43%, Valid Accuracy: 89.03%
+Epoch 4/18, Train Loss: 0.3304, Valid Loss: 0.2587, Train Accuracy: 88.29%, Valid Accuracy: 90.47%
+Epoch 5/18, Train Loss: 0.3096, Valid Loss: 0.2436, Train Accuracy: 89.13%, Valid Accuracy: 91.19%
+Epoch 6/18, Train Loss: 0.3033, Valid Loss: 0.2531, Train Accuracy: 89.28%, Valid Accuracy: 90.69%
+Epoch 7/18, Train Loss: 0.2896, Valid Loss: 0.2277, Train Accuracy: 89.88%, Valid Accuracy: 91.66%
+Epoch 8/18, Train Loss: 0.2805, Valid Loss: 0.2280, Train Accuracy: 89.95%, Valid Accuracy: 91.68%
+Epoch 9/18, Train Loss: 0.2725, Valid Loss: 0.2186, Train Accuracy: 90.32%, Valid Accuracy: 92.05%
+Epoch 10/18, Train Loss: 0.2635, Valid Loss: 0.2293, Train Accuracy: 90.67%, Valid Accuracy: 91.52%
+Epoch 11/18, Train Loss: 0.2546, Valid Loss: 0.2197, Train Accuracy: 90.75%, Valid Accuracy: 91.53%
+Epoch 12/18, Train Loss: 0.2549, Valid Loss: 0.2179, Train Accuracy: 90.91%, Valid Accuracy: 91.83%
+Epoch 13/18, Train Loss: 0.2478, Valid Loss: 0.2114, Train Accuracy: 91.20%, Valid Accuracy: 92.33%
+Epoch 14/18, Train Loss: 0.2391, Valid Loss: 0.2253, Train Accuracy: 91.46%, Valid Accuracy: 91.45%
+Epoch 15/18, Train Loss: 0.2360, Valid Loss: 0.2045, Train Accuracy: 91.56%, Valid Accuracy: 92.62%
+Epoch 16/18, Train Loss: 0.2318, Valid Loss: 0.2023, Train Accuracy: 91.67%, Valid Accuracy: 92.61%
+Epoch 17/18, Train Loss: 0.2257, Valid Loss: 0.2025, Train Accuracy: 92.00%, Valid Accuracy: 92.78%
+Epoch 18/18, Train Loss: 0.2223, Valid Loss: 0.2042, Train Accuracy: 91.98%, Valid Accuracy: 92.41%
+Loss and accuracy plot saved successfully
+Fold 4/5
+Epoch 1/18, Train Loss: 0.5394, Valid Loss: 0.3249, Train Accuracy: 81.10%, Valid Accuracy: 87.95%
+Epoch 2/18, Train Loss: 0.3883, Valid Loss: 0.3022, Train Accuracy: 86.38%, Valid Accuracy: 88.86%
+Epoch 3/18, Train Loss: 0.3514, Valid Loss: 0.3003, Train Accuracy: 87.60%, Valid Accuracy: 88.53%
+Epoch 4/18, Train Loss: 0.3309, Valid Loss: 0.2674, Train Accuracy: 88.30%, Valid Accuracy: 90.17%
+Epoch 5/18, Train Loss: 0.3095, Valid Loss: 0.2719, Train Accuracy: 89.16%, Valid Accuracy: 89.92%
+Epoch 6/18, Train Loss: 0.2967, Valid Loss: 0.2534, Train Accuracy: 89.55%, Valid Accuracy: 90.42%
+Epoch 7/18, Train Loss: 0.2881, Valid Loss: 0.2331, Train Accuracy: 89.93%, Valid Accuracy: 91.20%
+Epoch 8/18, Train Loss: 0.2760, Valid Loss: 0.2391, Train Accuracy: 90.17%, Valid Accuracy: 91.16%
+Epoch 9/18, Train Loss: 0.2683, Valid Loss: 0.2409, Train Accuracy: 90.42%, Valid Accuracy: 91.12%
+Epoch 10/18, Train Loss: 0.2589, Valid Loss: 0.2262, Train Accuracy: 90.68%, Valid Accuracy: 91.65%
+Epoch 11/18, Train Loss: 0.2528, Valid Loss: 0.2239, Train Accuracy: 91.07%, Valid Accuracy: 91.93%
+Epoch 12/18, Train Loss: 0.2522, Valid Loss: 0.2486, Train Accuracy: 91.09%, Valid Accuracy: 91.08%
+Epoch 13/18, Train Loss: 0.2416, Valid Loss: 0.2240, Train Accuracy: 91.38%, Valid Accuracy: 91.70%
+Epoch 14/18, Train Loss: 0.2373, Valid Loss: 0.2142, Train Accuracy: 91.67%, Valid Accuracy: 92.40%
+Epoch 15/18, Train Loss: 0.2315, Valid Loss: 0.2134, Train Accuracy: 91.68%, Valid Accuracy: 92.05%
+Epoch 16/18, Train Loss: 0.2298, Valid Loss: 0.2155, Train Accuracy: 91.78%, Valid Accuracy: 92.23%
+Epoch 17/18, Train Loss: 0.2270, Valid Loss: 0.2115, Train Accuracy: 91.88%, Valid Accuracy: 92.53%
+Epoch 18/18, Train Loss: 0.2185, Valid Loss: 0.2116, Train Accuracy: 92.22%, Valid Accuracy: 92.10%
+Loss and accuracy plot saved successfully
+Fold 5/5
+Epoch 1/18, Train Loss: 0.5363, Valid Loss: 0.3905, Train Accuracy: 81.13%, Valid Accuracy: 85.75%
+Epoch 2/18, Train Loss: 0.3892, Valid Loss: 0.3244, Train Accuracy: 86.29%, Valid Accuracy: 88.13%
+Epoch 3/18, Train Loss: 0.3512, Valid Loss: 0.3016, Train Accuracy: 87.52%, Valid Accuracy: 88.68%
+Epoch 4/18, Train Loss: 0.3316, Valid Loss: 0.2976, Train Accuracy: 88.39%, Valid Accuracy: 88.71%
+Epoch 5/18, Train Loss: 0.3107, Valid Loss: 0.2550, Train Accuracy: 89.01%, Valid Accuracy: 90.83%
+Epoch 6/18, Train Loss: 0.3024, Valid Loss: 0.2466, Train Accuracy: 89.38%, Valid Accuracy: 91.12%
+Epoch 7/18, Train Loss: 0.2868, Valid Loss: 0.2505, Train Accuracy: 89.75%, Valid Accuracy: 90.83%
+Epoch 8/18, Train Loss: 0.2753, Valid Loss: 0.2532, Train Accuracy: 90.20%, Valid Accuracy: 90.83%
+Epoch 9/18, Train Loss: 0.2687, Valid Loss: 0.2330, Train Accuracy: 90.52%, Valid Accuracy: 91.60%
+Epoch 10/18, Train Loss: 0.2624, Valid Loss: 0.2289, Train Accuracy: 90.57%, Valid Accuracy: 91.49%
+Epoch 11/18, Train Loss: 0.2566, Valid Loss: 0.2343, Train Accuracy: 90.85%, Valid Accuracy: 91.57%
+Epoch 12/18, Train Loss: 0.2506, Valid Loss: 0.2275, Train Accuracy: 91.18%, Valid Accuracy: 91.69%
+Epoch 13/18, Train Loss: 0.2441, Valid Loss: 0.2197, Train Accuracy: 91.30%, Valid Accuracy: 92.17%
+Epoch 14/18, Train Loss: 0.2365, Valid Loss: 0.2190, Train Accuracy: 91.52%, Valid Accuracy: 92.16%
+Epoch 15/18, Train Loss: 0.2355, Valid Loss: 0.2234, Train Accuracy: 91.69%, Valid Accuracy: 91.70%
+Epoch 16/18, Train Loss: 0.2259, Valid Loss: 0.2136, Train Accuracy: 91.92%, Valid Accuracy: 92.36%
+Epoch 17/18, Train Loss: 0.2260, Valid Loss: 0.2183, Train Accuracy: 91.74%, Valid Accuracy: 91.95%
+Epoch 18/18, Train Loss: 0.2192, Valid Loss: 0.2225, Train Accuracy: 92.22%, Valid Accuracy: 91.97%
+Loss and accuracy plot saved successfully
+Average loss and accuracy plot saved successfully
+Confusion matrix saved successfully (Validation)
+F1 Score: 0.9233 (Validation)
+Classification Report: (Validation)
+              precision    recall  f1-score   support
+
+ T-shirt/top       0.89      0.87      0.88      1197
+     Trouser       0.98      0.99      0.99      1226
+    Pullover       0.95      0.83      0.89      1224
+       Dress       0.91      0.94      0.92      1212
+        Coat       0.88      0.89      0.88      1235
+      Sandal       0.99      0.98      0.98      1233
+       Shirt       0.75      0.82      0.78      1171
+     Sneaker       0.97      0.95      0.96      1194
+         Bag       0.98      0.99      0.99      1156
+  Ankle boot       0.96      0.98      0.97      1152
+
+    accuracy                           0.92     12000
+   macro avg       0.92      0.92      0.92     12000
+weighted avg       0.92      0.92      0.92     12000
+
+Accuracy: 0.9230 (Validation)
+
+Most Common Misclassifications (Validation)
+    True Label Predicted Label  Count
+0  T-shirt/top           Shirt    115
+1        Shirt     T-shirt/top     94
+2         Coat           Shirt     93
+3     Pullover           Shirt     86
+4     Pullover            Coat     79
+5      Sneaker      Ankle boot     44
+6        Shirt            Coat     40
+7        Shirt        Pullover     37
+8        Dress            Coat     35
+9        Shirt           Dress     32
+
+
+Confusion matrix saved successfully (Test)
+F1 Score: 0.9200 (Test)
+Classification Report: (Test)
+              precision    recall  f1-score   support
+
+ T-shirt/top       0.88      0.86      0.87      1000
+     Trouser       0.99      0.99      0.99      1000
+    Pullover       0.94      0.85      0.89      1000
+       Dress       0.91      0.94      0.92      1000
+        Coat       0.87      0.88      0.87      1000
+      Sandal       0.98      0.97      0.98      1000
+       Shirt       0.74      0.79      0.77      1000
+     Sneaker       0.96      0.95      0.96      1000
+         Bag       0.98      0.99      0.99      1000
+  Ankle boot       0.95      0.97      0.96      1000
+
+    accuracy                           0.92     10000
+   macro avg       0.92      0.92      0.92     10000
+weighted avg       0.92      0.92      0.92     10000
+
+Accuracy: 0.9197 (Test)
+
+Most Common Misclassifications (Test)
+    True Label Predicted Label  Count
+0  T-shirt/top           Shirt     95
+1        Shirt     T-shirt/top     88
+2         Coat           Shirt     82
+3     Pullover           Shirt     70
+4     Pullover            Coat     56
+5        Shirt            Coat     52
+6      Sneaker      Ankle boot     39
+7        Shirt        Pullover     30
+8        Shirt           Dress     29
+9  T-shirt/top           Dress     24
+
+
+Misclassified images (Validation)
+Misclassified images saved successfully (Validation)
+Misclassified images (Test)
+Misclassified images saved successfully (Test)
+Unique predicted labels: [0 1 2 3 4 5 6 7 8 9]
+Unique true labels: [0 1 2 3 4 5 6 7 8 9]
+Confusion matrix saved successfully (Zero-Shot Classification with CLIP)
+F1 Score: 0.5979 (Zero-Shot Classification with CLIP)
+Classification Report: (Zero-Shot Classification with CLIP)
+              precision    recall  f1-score   support
+
+ T-shirt/top       0.82      0.63      0.72      1000
+     Trouser       0.75      0.98      0.85      1000
+    Pullover       0.31      0.93      0.47      1000
+       Dress       0.84      0.40      0.54      1000
+        Coat       0.50      0.16      0.24      1000
+      Sandal       0.74      0.55      0.63      1000
+       Shirt       0.42      0.04      0.07      1000
+     Sneaker       0.82      0.90      0.85      1000
+         Bag       0.84      0.85      0.85      1000
+  Ankle boot       0.70      0.86      0.77      1000
+
+    accuracy                           0.63     10000
+   macro avg       0.67      0.63      0.60     10000
+weighted avg       0.67      0.63      0.60     10000
+
+Accuracy: 0.6285 (Zero-Shot Classification with CLIP)
+
+Most Common Misclassifications (Zero-Shot Classification with CLIP)
+    True Label Predicted Label  Count
+0         Coat        Pullover    800
+1        Shirt        Pullover    729
+2       Sandal      Ankle boot    324
+3        Dress        Pullover    222
+4  T-shirt/top        Pullover    195
+5        Dress         Trouser    146
+6   Ankle boot         Sneaker    131
+7        Dress            Coat    113
+8        Shirt     T-shirt/top     95
+9          Bag        Pullover     80
+Best match index: 9973, Similarity: 33.4688
+text_to_image_saved_successfully
+Best match index: 6195, Similarity: 32.7188
+text_to_image_saved_successfully
+Best match index: 7599, Similarity: 31.9688
+text_to_image_saved_successfully
+Best match index: 579, Similarity: 33.5000
+text_to_image_saved_successfully
+Best match index: 5771, Similarity: 29.3594
+text_to_image_saved_successfully
+Best match index: 3022, Similarity: 29.5156
+text_to_image_saved_successfully

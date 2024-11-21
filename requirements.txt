@@ -1,9 +1,0 @@
-python==3.10
-torch
-torchvision
-matplotlib
-numpy
-tqdm
-optuna
-scikit-learn
-umap-learn

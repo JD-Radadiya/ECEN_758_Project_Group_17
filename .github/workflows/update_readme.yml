@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'images/**'
+      - 'Images/**'
 
 jobs:
   update-markdown:
@@ -21,7 +21,7 @@ jobs:
           cat > generate_markdown.py << 'EOF'
           import os
           
-          def generate_image_markdown(image_dir="images"):
+          def generate_image_markdown(image_dir="Images"):
               markdown_lines = ["# Loss Accuracy Plots\n"]
               image_files = [f for f in os.listdir(image_dir) if f.endswith(".png")]
               image_files.sort()

@@ -32,7 +32,7 @@ The model architecture was implemented using PyTorch. It consists of multiple co
 </div> 
 
 <div align="center">
-    <img src="Images/Hierarchical%20Representation%20of%20CNN%20Architecture.png" alt="Hierarchical Representation of CNN Architecture">
+    <img src="Images/Hierarchical Representation of CNN Architecture.svg" alt="Hierarchical Representation of CNN Architecture">
 </div>
 
 The optimized model achieved a validation accuracy of 91% with a corresponding F1-score of 0.89. We have used confusion matrix to support our analysis. 

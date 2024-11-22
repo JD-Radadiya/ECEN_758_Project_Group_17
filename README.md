@@ -168,6 +168,16 @@ Results from the CLIP classification showed similar outcomes as the CNN results.
       <br><b>Photo of T-shirt</b><br>
     </td>
   </tr>
+    <tr>
+    <td align="center">
+      <img src="Images/text_to_image_a_photo_of_a_cat.png" height="150">
+      <br><b>Photo of Cat</b><br>
+    </td>
+    <td align="center">
+      <img src="Images/text_to_image_a_photo_of_a_dog.png" height="150">
+      <br><b>Photo of Dog</b><br>
+    </td>
+  </tr>
 </table>
 
 ## Challenges and Limitations

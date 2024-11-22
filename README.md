@@ -26,25 +26,50 @@ pip install -r requirements.txt
 Data preprocessing included normalization to scale the pixel values to range [-1,1], random rotation (up to 10 degrees), and random horizontal flipping with a 50% probability to enhance the generalizablity of the the model. 
 
 ## Model Architecture
-The model architecture was implemented using PyTorch. It consists of multiple convolutional layers followed by batch normalization, ReLU activations and max pooling layers to extract meaningful features from the images. The final fully connected layers are structured to generate output class probabilities through a softmax layer. <br>
+
+The model architecture was implemented using PyTorch. It consists of multiple convolutional layers followed by batch normalization, ReLU activations, and max pooling layers to extract meaningful features from the images. The final fully connected layers are structured to generate output class probabilities through a softmax layer.
+
 
 <div align="center">
   <b>Hierarchical Representation of CNN Architecture</b>
-</div> 
-
-<div align="center">
-    <img src="Images/model_arc.png" alt="Hierarchical Representation of CNN Architecture">
 </div>
 
-The output of the model is the classification of images into the 10 classes 
-![Output Image](Images/output_image.png)
+<div align="center">
+  <img src="Images/model_arc.png" alt="Hierarchical Representation of CNN Architecture">
+</div>
 
-The optimized model achieved a validation accuracy of 91.97% with a corresponding F1-score of 0.9192. We have used confusion matrix to support our analysis. 
-![Confusion Matrix Validation](Images/confusion_matrix_Validation.png)
-![Confusion Matrix Test](Images/confusion_matrix_Test.png)
-The highest accuracy was observed for classes like Ankle Boot and Trouser, while the model struggled slightly with distinguishing Shirt from T-shirt due to visual similarities.
 
-To gain further insights into the learned representations of the model, we used UMAP a dimensionality reduction technique that helps visualize high-dimensional data in a two-dimensional space.
+
+The output of the model is the classification of images into 10 classes:
+
+<div align="center">
+  <img src="Images/output_image.png" alt="Output Image">
+</div>
+
+
+The optimized model achieved:
+- **Validation Accuracy**: 91.97%
+- **F1-Score**: 0.9192
+
+We used a confusion matrix to support our analysis:
+
+<table border="1" align="center">
+  <tr>
+    <td align="center">
+      <img src="Images/confusion_matrix_Validation.png" height="400">
+      <br><b>Confusion Matrix - Validation</b><br>
+    </td>
+    <td align="center">
+      <img src="Images/confusion_matrix_Test.png" height="400">
+      <br><b>Confusion Matrix - Test</b><br>
+    </td>
+  </tr>
+</table>
+
+
+The highest accuracy was observed for classes like **Ankle Boot** and **Trouser**, while the model struggled slightly with distinguishing **Shirt** from **T-shirt** due to visual similarities.
+
+To gain further insights into the learned representations of the model, we used **UMAP**, a dimensionality reduction technique that helps visualize high-dimensional data in a two-dimensional space.
 
 ### UMAP
 
@@ -115,7 +140,10 @@ This plot shows the average loss accuracy across five different training folds, 
 ## Image to Text Classification with CLIP
 Results from the CLIP classification showed similar outcomes as the CNN results. For images that were visually similar their associated text label was misclassified, such as when coats were misclassified with pullovers 802 times by the model. Moreover, the accuracy and f1-score of the CLIP confusion matrix, 0.629 and 0.598, respectively, support the need for improving model pretraining.
 
-![Confusion Matric CLIP](https://github.com/JD-Radadiya/ECEN_758_Project_Group_17/blob/main/Images/confusion_matrix_Zero-Shot%20Classification%20with%20CLIP.png)
+<div align="center">
+    <img src="Images/confusion_matrix_Zero-Shot Classification with CLIP.png" >
+</div>
+
 
 ### CLIP Outputs 
 
@@ -146,14 +174,16 @@ Results from the CLIP classification showed similar outcomes as the CNN results.
 
 The analysis of misclassified samples highlighted challenges in distinguishing between visually similar classes. This limitation suggests that additional techniques, such as advanced feature extraction or attention mechanisms, could be explored to further improve classification performance.
 
-<div align="center">
-  <b>Misclassified Images Test</b>
-</div>
-
-![Misclassified Images Test](Images/misclassified_images_Test.png)
-
-<div align="center">
-  <b>Misclassified Images Validation</b>
-</div>
-
-![Misclassified Images Validation](Images/misclassified_images_Validation.png)
+<table border="1" align="center">
+  <tr>
+    <td align="center">
+      <img src="Images/misclassified_images_Test.png" height="`30">
+      <br><b>Misclassified Images Test</b><br>
+    </td>
+    <td align="center">
+      <img src="Images/misclassified_images_Validation.png" height="`30">
+      <br><b>Misclassified Images Validation</b><br>
+    </td>
+  </tr>
+  <tr>
+    

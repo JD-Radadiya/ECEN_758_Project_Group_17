@@ -8,5 +8,4 @@ tqdm
 optuna
 scikit-learn
 umap-learn
-clip
 pandas

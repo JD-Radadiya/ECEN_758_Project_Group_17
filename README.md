@@ -23,11 +23,11 @@ pip install -r requirements.txt
 ```
 
 ## Data Preprocessing 
-Data preprocessing included normalization to scale the pixel values to range [-1,1], random rotation (up to 10 degrees), and random horizontal flipping with a 50% probability to enhance the generalizablity of the the model. 
+Data preprocessing included normalization to scale the pixel values to range [-1,1], random rotation (up to 10 degrees), and random horizontal flipping with a 50% probability to enhance the generalizablity of the the model. These augmentations increased the diversity of the training set and helped prevent overfitting.
 
 ## Model Architecture
 
-The model architecture was implemented using PyTorch. It consists of multiple convolutional layers followed by batch normalization, ReLU activations, and max pooling layers to extract meaningful features from the images. The final fully connected layers are structured to generate output class probabilities through a softmax layer.
+The model is based on CNN architecture and is implemented using PyTorch. It consists of multiple convolutional layers followed by batch normalization, ReLU activations, and max pooling layers to extract meaningful features from the images. The final fully connected layers are structured to generate output class probabilities through a softmax layer.
 
 
 <div align="center">
@@ -137,13 +137,36 @@ This section displays individual loss accuracy plots for different configuration
 This plot shows the average loss accuracy across five different training folds, providing a comprehensive view of the model's performance across multiple runs.
 ![Loss Accuracy Plot across 5 folds](Images/average_loss_accuracy_plot_across_5_folds.png)
 
-## Image to Text Classification with CLIP
-Results from the CLIP classification showed similar outcomes as the CNN results. For images that were visually similar their associated text label was misclassified, such as when coats were misclassified with pullovers 802 times by the model. Moreover, the accuracy and f1-score of the CLIP confusion matrix, 0.629 and 0.598, respectively, support the need for improving model pretraining.
+## Challenges and Limitations
+
+The analysis of misclassified samples highlighs the challenge of distinguishing between visually similar classes.  This limitation suggests that additional techniques, such as advanced feature extraction or attention mechanisms, could be explored to further improve classification performance.
+
+
+<table border="1" align="center" style="width:80%; margin:auto;">
+  <tr>
+    <td align="center">
+      <img src="Images/misclassified_images_Test.png" height="150">
+      <br><b>Misclassified Images - Test</b><br>
+    </td>
+    <td align="center">
+      <img src="Images/misclassified_images_Validation.png" height="150">
+      <br><b>Misclassified Images - Validation</b><br>
+    </td>
+  </tr>
+</table>
+
+
+## Image to Text Classification via CLIP
+
+Results from the CLIP classification showed worse outcomes compared to the original CNN results. For images that were visually similar, their associated text label was misclassified. For example, coats were misclassified as pullovers 802 times by the model. Moreover, the accuracy and F1-score of the CLIP confusion matrix, **0.629** and **0.598**, respectively, support the need for improving model pretraining.
 
 <div align="center">
-    <img src="Images/confusion_matrix_Zero-Shot Classification with CLIP.png" >
+  <img src="Images/confusion_matrix_Zero-Shot Classification with CLIP.png" alt="Confusion Matrix - Zero-Shot Classification with CLIP" style="width:70%; max-width:600px;">
 </div>
 
+### CLIP Model Analysis
+CLIP, primarily trained on color images, faces challenges when processing grayscale data. The absence of color information, which CLIP heavily relies on from its pretraining, constrains its ability to differentiate object classes based solely on texture and shape. This limitation results in misclassification issues for objects with similar textures and shapes, a problem observed in both CNN and CLIP models. </br>
+While CLIP may underperform as a standalone classifier in this context, its effectiveness can be significantly enhanced through task-specific fine-tuning or by integrating it with vision and language model pre-training techniques. These approaches can potentially lead to substantial improvements in classification performance.
 
 ### CLIP Outputs 
 
@@ -180,20 +203,3 @@ Results from the CLIP classification showed similar outcomes as the CNN results.
   </tr>
 </table>
 
-## Challenges and Limitations
-
-The analysis of misclassified samples highlighted challenges in distinguishing between visually similar classes. This limitation suggests that additional techniques, such as advanced feature extraction or attention mechanisms, could be explored to further improve classification performance.
-
-<table border="1" align="center">
-  <tr>
-    <td align="center">
-      <img src="Images/misclassified_images_Test.png" height="`30">
-      <br><b>Misclassified Images Test</b><br>
-    </td>
-    <td align="center">
-      <img src="Images/misclassified_images_Validation.png" height="`30">
-      <br><b>Misclassified Images Validation</b><br>
-    </td>
-  </tr>
-  <tr>
-    

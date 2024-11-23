@@ -168,7 +168,7 @@ Results from the CLIP classification showed worse outcomes compared to the origi
 CLIP, primarily trained on color images, faces challenges when processing grayscale data. The absence of color information, which CLIP heavily relies on from its pretraining, constrains its ability to differentiate object classes based solely on texture and shape. This limitation results in misclassification issues for objects with similar textures and shapes, a problem observed in both CNN and CLIP models. </br>
 While CLIP may underperform as a standalone classifier in this context, its effectiveness can be significantly enhanced through task-specific fine-tuning or by integrating it with vision and language model pre-training techniques. These approaches can potentially lead to substantial improvements in classification performance.
 
-### CLIP Outputs 
+### CLIP Zero Shot Text to Image Outputs
 
 <table border="1" align="center">
   <tr>
@@ -202,4 +202,7 @@ While CLIP may underperform as a standalone classifier in this context, its effe
     </td>
   </tr>
 </table>
+
+### Text To Image Output Analysis
+The results indicate that our zero-shot classification performed well for the initial four queries, demonstrating that the CLIP model effectively understood our dataset. To test its robustness, we intentionally provided queries for shapes not present in the dataset. Interestingly, CLIP associated a bag with the top view of a cat, highlighting its perceptual bias and the nuances of its learned embeddings. This behavior underscores the potential for improvement in zero-shot classification tasks. With enhanced resources and advanced image preprocessing techniques, we believe the text-to-image classification accuracy of CLIP can be significantly improved.
 
